@@ -1,0 +1,5 @@
+﻿  RegisterUser.cpp
+D:\training_gym\PassKeeper\PassKeeper\Database.hpp(48,2): warning C4091: 'static ': ignored on left of 'Database' when no variable is declared
+  (compiling source file 'RegisterUser.cpp')
+  
+  PassKeeper.vcxproj -> D:\training_gym\PassKeeper\x64\Debug\PassKeeper.exe
