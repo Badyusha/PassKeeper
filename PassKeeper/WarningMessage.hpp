@@ -20,6 +20,7 @@ public:
 	~WarningMessage();
 
 	Ui::WarningMessageClass* getUi() const;
+	void unhandledExceptionError();
 };
 
 #endif

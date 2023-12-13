@@ -125,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.hpp" />
+    <ClInclude Include="Enums.hpp" />
     <ClInclude Include="Functions.hpp" />
     <ClInclude Include="Libraries.hpp" />
     <QtMoc Include="RegisterUser.hpp" />

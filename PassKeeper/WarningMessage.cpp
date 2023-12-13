@@ -10,3 +10,8 @@ WarningMessage::~WarningMessage() {
 }
 
 Ui::WarningMessageClass* WarningMessage::getUi() const { return this->ui; }
+
+void WarningMessage::unhandledExceptionError() {
+	this->ui->WarningMessage->setText("Something went wrong :(");
+	this->ui->ErrorCode->setText("Error code: " + QString::number(CONDITION::ERROR));
+}

@@ -18,22 +18,26 @@ int connectToDatabase(const std::string& server, const std::string& username, co
 }
 
 
-std::string hashEncrypt(const std::string& str) {
-	const unsigned char* data = (const unsigned char*)str.c_str();
-	size_t length = sizeof(data);
+std::string hashEncrypt(const std::string& input) {
+    // Создаем объект контекста для хэширования SHA-1
+    SHA_CTX sha1Context;
+    SHA1_Init(&sha1Context);
 
-	unsigned char hash[SHA_DIGEST_LENGTH];
-	SHA1(data, length, hash);
+    // Обновляем контекст хэширования с данными
+    SHA1_Update(&sha1Context, input.c_str(), input.length());
 
+    // Получаем финальный хэш
+    unsigned char hash[SHA_DIGEST_LENGTH];
+    SHA1_Final(hash, &sha1Context);
 
-	char mdString[SHA_DIGEST_LENGTH];
+    // Преобразуем бинарный хэш в строку
+    char hexString[SHA_DIGEST_LENGTH * 2 + 1];
+    for (int i = 0; i < SHA_DIGEST_LENGTH; ++i) {
+        std::sprintf(hexString + 2 * i, "%02x", hash[i]);
+    }
 
-	for (int i = 0; i < (SHA_DIGEST_LENGTH / 2) - 1; i++) {
-		sprintf(&mdString[i * 2], "%02x", (unsigned int)hash[i]);
-	}
-	return mdString;
+    return hexString;
 }
-
 
 
 std::string encrypt(const std::string& plaintext, const std::string& key) {

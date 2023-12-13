@@ -3,21 +3,20 @@
 
 #include "Functions.hpp"
 
-static class Database {
+class Database {
 	const char* server;
 	const char* username;
 	const char* password;
 
-	sql::Driver* driver;
-	sql::Connection* con;
-	sql::PreparedStatement* pstmt;
-	sql::ResultSet* result;
-
 	bool connected;
 
+	inline static sql::Driver* driver = nullptr;
+	inline static sql::Connection* con = nullptr;
+	inline static sql::ResultSet* result = nullptr;
+	inline static sql::PreparedStatement* pstmt = nullptr;
+
 public:
-	Database() : server("Undefinied"), username("Undefinied"), password("Undefinied"),
-				 driver(nullptr), con(nullptr), pstmt(nullptr), result(nullptr), connected(false) {};
+	Database() : server("Undefinied"), username("Undefinied"), password("Undefinied"), connected(false) {};
 	Database(const char* server_, const char* username_, const char* password_, const bool& connected_ = false,
 			 const sql::PreparedStatement* pstmt_ = nullptr, const sql::ResultSet* result_ = nullptr);
 	~Database();
@@ -28,21 +27,21 @@ public:
 	void setUsername(const char* username_) { this->username = username_; }
 	void setPassword(const char* password_) { this->password = password_; }
 
-	void setDriver(sql::Driver* driver_) { this->driver = driver_; }
-	void setConnection(sql::Connection* con_) { this->con = con_; }
-	void setPreparedStatement(sql::PreparedStatement* pstmt_) { this->pstmt = pstmt_; }
-	void setResultSet(sql::ResultSet* result_) { this->result = result_; }
+	static void setDriver(sql::Driver* driver_) { driver = driver_; }
+	static void setConnection(sql::Connection* con_) { con = con_; }
+	static void setResultSet(sql::ResultSet* result_) { result = result_; }
+	static void setPreparedStatement(sql::PreparedStatement* pstmt_) { pstmt = pstmt_; }
 
 
-
+	
 	const char* getServer() const { return this->server; }
 	const char* getUsername() const { return this->username; }
 	const char* getPassword() const { return this->password; }
 
-	sql::Driver* getDriver() const { return this->driver; }
-	sql::Connection* getConnection() const { return this->con; }
-	sql::PreparedStatement* getPreparedStatement() const { return this->pstmt; }
-	sql::ResultSet* getResultSet() const { return this->result; }
+	static sql::Driver* getDriver() { return driver; }
+	static sql::Connection* getConnection() { return con; }
+	static sql::ResultSet* getResultSet() { return result; }
+	static sql::PreparedStatement* getPreparedStatement() { return pstmt; }
 
 	bool isConnected() const { return this->connected; }
 };

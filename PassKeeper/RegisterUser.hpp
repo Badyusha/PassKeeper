@@ -13,17 +13,16 @@ class RegisterUser : public QWidget
 	Q_OBJECT
 
 	Ui::RegisterUserClass *ui;
-	std::unique_ptr<Database> database;
 
 private slots:
 	void on_SignUp_clicked();
 
 public:
-	RegisterUser(Database* database, QWidget *parent = nullptr);
+	RegisterUser(QWidget *parent = nullptr);
 	~RegisterUser();
 
 	void errorLoginingMessage(const QString& errorMessage);
-
+	CONDITION enteredDataIsIncorrect();
 };
 
 #endif

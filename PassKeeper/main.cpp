@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
         input.close();
         WarningMessage* warning = new WarningMessage();
         warning->getUi()->WarningMessage->setText("Cannot get server info to connect to the database!");
-        warning->getUi()->ErrorCode->setText("Error code: " + QString::number(CONDITION::UNHANDLED_ERROR));
+        warning->getUi()->ErrorCode->setText("Error code: " + QString::number(CONDITION::ERROR));
         warning->show();
         return a.exec();
     }
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
                                       decrypt(username, key).c_str(),
                                       decrypt(password, key).c_str());
 
-    Registration* registartion = new Registration(database);
+    Registration* registartion = new Registration();
     if (database->isConnected()) { registartion->show(); }
 
     return a.exec();

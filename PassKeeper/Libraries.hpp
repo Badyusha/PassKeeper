@@ -30,13 +30,8 @@
 #include "ui_ClientMainMenu.h"
 #include "ui_RegisterUser.h"
 
-
-
-
-enum CONDITION {
-	NO_ERROR = 1,
-	UNHANDLED_ERROR = -1
-};
+// enums
+#include "Enums.hpp"
 
 
 
