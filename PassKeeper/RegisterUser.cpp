@@ -76,8 +76,20 @@ void RegisterUser::on_SignUp_clicked() {
 		return;
 	}
 
-	this->ui->LoginStatus->setStyleSheet("color: rgb(170, 255, 127);"); // set green color text
-	this->ui->LoginStatus->setText("Successfully");
+	this->hide();
+
+	//this->ui->LoginStatus->setStyleSheet("color: rgb(170, 255, 127);"); // set green color text
+	//this->ui->LoginStatus->setText("Successfully");
+
+	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Id, Login from Users where Login = ?;"));
+
+	Database::getPreparedStatement()->setString(1, this->ui->LoginInput->text().toLocal8Bit().constData());
+
+	Database::setResultSet(Database::getPreparedStatement()->executeQuery());
+	Database::getResultSet()->next();
 
 	// redirect to menu
+	UserCabinet* userCab = new UserCabinet(Database::getResultSet()->getUInt64(1));
+	userCab->getUi()->Login->setText(Database::getResultSet()->getString(2).c_str());
+	userCab->show();
 }

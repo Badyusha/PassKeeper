@@ -13,13 +13,12 @@ Registration::~Registration() { delete this->ui; }
 void Registration::on_SignIn_clicked() {
 	Database::getConnection()->setSchema("PassKeeper");
 
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword from Users where Login = ?;"));
+	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword, Id from Users where Login = ?;"));
 
 	std::string login = this->ui->LoginInput->text().toLocal8Bit().constData();
 	Database::getPreparedStatement()->setString(1, login);
 
 	Database::setResultSet(Database::getPreparedStatement()->executeQuery());
-
 	Database::getResultSet()->next();
 
 	try {
@@ -46,13 +45,19 @@ void Registration::on_SignIn_clicked() {
 		abort();
 	}
 
-	this->ui->LoginStatus->setStyleSheet("color: rgb(170, 255, 127);");
-	this->ui->LoginStatus->setText("Successfully");
+	this->hide();
+
+	/*this->ui->LoginStatus->setStyleSheet("color: rgb(170, 255, 127);");
+	this->ui->LoginStatus->setText("Successfully");*/
+	
 	// redirect to the menu
+	UserCabinet* userCab = new UserCabinet(Database::getResultSet()->getUInt64(3));
+	userCab->getUi()->Login->setText((login.c_str()));
+	userCab->show();
 }
 
 void Registration::on_SignUp_clicked() {
+	this->hide();
 	RegisterUser* registerUser = new RegisterUser();
 	registerUser->show();
-	hide();
 }

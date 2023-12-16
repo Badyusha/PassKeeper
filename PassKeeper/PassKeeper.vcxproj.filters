@@ -55,6 +55,9 @@
     <ClCompile Include="RegisterUser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UserCabinet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libraries.hpp">
@@ -82,12 +85,18 @@
     <QtMoc Include="RegisterUser.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="UserCabinet.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="WarningMessage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="RegisterUser.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="UserCabinet.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

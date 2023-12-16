@@ -1,8 +1,8 @@
 #ifndef REGISTERUSER_HPP
 #define REGISTERUSER_HPP
 
-#include <QWidget>
 #include "Database.hpp"
+#include "UserCabinet.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class RegisterUserClass; };
