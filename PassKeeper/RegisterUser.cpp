@@ -64,15 +64,16 @@ void RegisterUser::on_SignUp_clicked() {
 	try {
 		Database::getPreparedStatement()->execute();
 	}
-	catch (sql::InvalidArgumentException error) {
+	catch (sql::SQLException error) {
 		Database::setPreparedStatement(nullptr);
 		Database::setResultSet(nullptr);
 
 		this->ui->LoginInput->clear();
 		this->ui->PasswordInput->clear();
+		this->ui->RepeatPasswordInput->clear();
 
 		this->ui->LoginStatus->setStyleSheet("color: rgb(255, 224, 70);"); // set red color text
-		this->ui->LoginStatus->setText("Oops! Something went wrong");
+		this->ui->LoginStatus->setText("Oops! Something went wrong\nMake sure there are no russian letters");
 		return;
 	}
 

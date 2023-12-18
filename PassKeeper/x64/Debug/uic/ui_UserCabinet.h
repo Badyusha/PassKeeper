@@ -11,13 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
-#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -33,7 +33,8 @@ public:
     QAction *actionDelete_2;
     QAction *actionExit;
     QWidget *centralWidget;
-    QPushButton *Close;
+    QGridLayout *gridLayout;
+    QVBoxLayout *verticalLayout_4;
     QLabel *Login;
     QMenuBar *menuBar;
     QMenu *menuAccount;
@@ -43,7 +44,7 @@ public:
     {
         if (UserCabinetClass->objectName().isEmpty())
             UserCabinetClass->setObjectName("UserCabinetClass");
-        UserCabinetClass->resize(600, 400);
+        UserCabinetClass->resize(700, 425);
         UserCabinetClass->setStyleSheet(QString::fromUtf8("background-color: rgb(70, 70, 70);"));
         actionCreate_new = new QAction(UserCabinetClass);
         actionCreate_new->setObjectName("actionCreate_new");
@@ -61,33 +62,35 @@ public:
         actionExit->setObjectName("actionExit");
         centralWidget = new QWidget(UserCabinetClass);
         centralWidget->setObjectName("centralWidget");
-        Close = new QPushButton(centralWidget);
-        Close->setObjectName("Close");
-        Close->setGeometry(QRect(570, 0, 31, 24));
-        Close->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"	border: none;\n"
-"}\n"
-"QPushButton:hover{\n"
-"	background-color: rgb(80, 80, 80);\n"
-"}\n"
-"QPushButton:pressed{\n"
-"	background-color: rgb(90, 90, 90);\n"
-"}"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8("../icons/cross.png"), QSize(), QIcon::Normal, QIcon::Off);
-        Close->setIcon(icon);
-        Close->setIconSize(QSize(12, 12));
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName("gridLayout");
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+
+        gridLayout->addLayout(verticalLayout_4, 0, 0, 1, 1);
+
         Login = new QLabel(centralWidget);
         Login->setObjectName("Login");
-        Login->setGeometry(QRect(10, 350, 581, 16));
+        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Login->sizePolicy().hasHeightForWidth());
+        Login->setSizePolicy(sizePolicy);
         QFont font;
         font.setBold(true);
         Login->setFont(font);
         Login->setStyleSheet(QString::fromUtf8("color: rgb(155, 155, 155);"));
+        Login->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
+
+        gridLayout->addWidget(Login, 1, 0, 1, 2);
+
         UserCabinetClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UserCabinetClass);
         menuBar->setObjectName("menuBar");
-        menuBar->setGeometry(QRect(0, 0, 600, 22));
+        menuBar->setGeometry(QRect(0, 0, 700, 22));
         menuBar->setStyleSheet(QString::fromUtf8("QMenuBar{\n"
 "	color: rgb(255, 255, 255);\n"
 "	selection-background-color:  rgb(111, 106, 141);\n"
@@ -125,7 +128,6 @@ public:
         menuKeeper->addAction(actionDelete);
 
         retranslateUi(UserCabinetClass);
-        QObject::connect(Close, &QPushButton::clicked, UserCabinetClass, qOverload<>(&QMainWindow::close));
 
         QMetaObject::connectSlotsByName(UserCabinetClass);
     } // setupUi
@@ -140,8 +142,7 @@ public:
         actionDelete->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
         actionDelete_2->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
         actionExit->setText(QCoreApplication::translate("UserCabinetClass", "Exit", nullptr));
-        Close->setText(QString());
-        Login->setText(QCoreApplication::translate("UserCabinetClass", "hbhbh", nullptr));
+        Login->setText(QCoreApplication::translate("UserCabinetClass", "ergwerg", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("UserCabinetClass", "Account", nullptr));
         menuKeeper->setTitle(QCoreApplication::translate("UserCabinetClass", "Keeper", nullptr));
     } // retranslateUi

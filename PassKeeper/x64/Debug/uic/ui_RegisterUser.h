@@ -69,7 +69,7 @@ public:
 "}"));
         LoginStatus = new QLabel(RegisterUserClass);
         LoginStatus->setObjectName("LoginStatus");
-        LoginStatus->setGeometry(QRect(10, 225, 481, 16));
+        LoginStatus->setGeometry(QRect(10, 225, 481, 31));
         QFont font1;
         font1.setBold(true);
         LoginStatus->setFont(font1);

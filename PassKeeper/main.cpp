@@ -2,7 +2,6 @@
 
 
 int main(int argc, char *argv[]) {
-
     QApplication a(argc, argv);
 
     std::ifstream input("DBSI.txt", std::ios::in);

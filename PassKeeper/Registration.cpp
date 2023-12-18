@@ -18,20 +18,20 @@ void Registration::on_SignIn_clicked() {
 	std::string login = this->ui->LoginInput->text().toLocal8Bit().constData();
 	Database::getPreparedStatement()->setString(1, login);
 
-	Database::setResultSet(Database::getPreparedStatement()->executeQuery());
-	Database::getResultSet()->next();
 
 	try {
+		Database::setResultSet(Database::getPreparedStatement()->executeQuery());
+		Database::getResultSet()->next();
 		if (Database::getResultSet()->getString(1) != login ||
 			Database::getResultSet()->getString(2) != hashEncrypt(this->ui->PasswordInput->text().toLocal8Bit().constData()))
 		{
-			throw sql::InvalidArgumentException("Incorrect data");
+			throw sql::SQLException("Incorrect data");
 		}
 	}
-	catch (sql::InvalidArgumentException error) {
+	catch (sql::SQLException error) {
 		Database::setPreparedStatement(nullptr);
 		Database::setResultSet(nullptr);
-		
+
 		this->ui->LoginInput->clear();
 		this->ui->PasswordInput->clear();
 
@@ -42,7 +42,10 @@ void Registration::on_SignIn_clicked() {
 	catch (...) {
 		WarningMessage* warning = new WarningMessage();
 		warning->unhandledExceptionError();
-		abort();
+
+		this->hide();
+		warning->show();
+		return;
 	}
 
 	this->hide();

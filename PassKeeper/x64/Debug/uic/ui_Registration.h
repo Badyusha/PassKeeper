@@ -176,7 +176,7 @@ public:
 
         LoginStatus = new QLabel(RegistrationClass);
         LoginStatus->setObjectName("LoginStatus");
-        LoginStatus->setGeometry(QRect(10, 205, 431, 16));
+        LoginStatus->setGeometry(QRect(10, 205, 431, 31));
         LoginStatus->setFont(font1);
         LoginStatus->setStyleSheet(QString::fromUtf8("color: rgb(170, 255, 127);"));
         LoginStatus->setAlignment(Qt::AlignCenter);

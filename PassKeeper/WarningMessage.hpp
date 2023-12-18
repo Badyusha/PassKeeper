@@ -1,7 +1,7 @@
 #ifndef WARNINGMESSAGE_HPP
 #define WARNINGMESSAGE_HPP
 
-#include "Libraries.hpp"
+#include "Registration.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class WarningMessageClass; };

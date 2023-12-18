@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>700</width>
+    <height>425</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,68 +17,42 @@
    <string notr="true">background-color: rgb(70, 70, 70);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="Close">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>0</y>
-      <width>31</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton{
-	border: none;
-}
-QPushButton:hover{
-	background-color: rgb(80, 80, 80);
-}
-QPushButton:pressed{
-	background-color: rgb(90, 90, 90);
-}</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset>
-      <normaloff>../icons/cross.png</normaloff>../icons/cross.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>12</width>
-      <height>12</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Login">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>350</y>
-      <width>581</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(155, 155, 155);</string>
-    </property>
-    <property name="text">
-     <string>hbhbh</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_4"/>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="Login">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(155, 155, 155);</string>
+      </property>
+      <property name="text">
+       <string>ergwerg</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>700</width>
      <height>22</height>
     </rect>
    </property>
@@ -166,22 +140,5 @@ background-color: rgb(101, 97, 129);</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>Close</sender>
-   <signal>clicked()</signal>
-   <receiver>UserCabinetClass</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>580</x>
-     <y>28</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>588</x>
-     <y>83</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
