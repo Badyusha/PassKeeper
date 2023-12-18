@@ -23,7 +23,7 @@ public:
 	~UserCabinet();
 
 	Ui::UserCabinetClass* getUi() const;
-
+	int getRecordsCount();
 };
 
 #endif

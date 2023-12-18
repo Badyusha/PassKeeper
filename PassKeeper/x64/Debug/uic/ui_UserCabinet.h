@@ -17,7 +17,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,8 +34,10 @@ public:
     QAction *actionExit;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout_4;
     QLabel *Login;
+    QSpacerItem *horizontalSpacer;
+    QSpacerItem *verticalSpacer;
+    QLabel *RecordsCount;
     QMenuBar *menuBar;
     QMenu *menuAccount;
     QMenu *menuKeeper;
@@ -66,14 +68,9 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName("gridLayout");
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setSpacing(6);
-        verticalLayout_4->setObjectName("verticalLayout_4");
-
-        gridLayout->addLayout(verticalLayout_4, 0, 0, 1, 1);
-
         Login = new QLabel(centralWidget);
         Login->setObjectName("Login");
+        Login->setEnabled(true);
         QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -85,7 +82,22 @@ public:
         Login->setStyleSheet(QString::fromUtf8("color: rgb(155, 155, 155);"));
         Login->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
 
-        gridLayout->addWidget(Login, 1, 0, 1, 2);
+        gridLayout->addWidget(Login, 2, 0, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 2, 1, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout->addItem(verticalSpacer, 1, 0, 1, 1);
+
+        RecordsCount = new QLabel(centralWidget);
+        RecordsCount->setObjectName("RecordsCount");
+        RecordsCount->setFont(font);
+        RecordsCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+
+        gridLayout->addWidget(RecordsCount, 0, 0, 1, 1);
 
         UserCabinetClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(UserCabinetClass);
@@ -142,7 +154,8 @@ public:
         actionDelete->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
         actionDelete_2->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
         actionExit->setText(QCoreApplication::translate("UserCabinetClass", "Exit", nullptr));
-        Login->setText(QCoreApplication::translate("UserCabinetClass", "ergwerg", nullptr));
+        Login->setText(QString());
+        RecordsCount->setText(QCoreApplication::translate("UserCabinetClass", "Your keeper records count: ", nullptr));
         menuAccount->setTitle(QCoreApplication::translate("UserCabinetClass", "Account", nullptr));
         menuKeeper->setTitle(QCoreApplication::translate("UserCabinetClass", "Keeper", nullptr));
     } // retranslateUi
