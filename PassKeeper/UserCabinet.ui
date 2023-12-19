@@ -82,7 +82,7 @@
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Your keeper records count: </string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -120,8 +120,8 @@ background-color: rgb(101, 97, 129);
     <property name="title">
      <string>Account</string>
     </property>
-    <addaction name="actionDelete_2"/>
-    <addaction name="actionExit"/>
+    <addaction name="actionDeleteAccount"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuKeeper">
     <property name="styleSheet">
@@ -168,14 +168,14 @@ background-color: rgb(101, 97, 129);</string>
     <string>Delete</string>
    </property>
   </action>
-  <action name="actionDelete_2">
+  <action name="actionDeleteAccount">
    <property name="text">
     <string>Delete</string>
    </property>
   </action>
-  <action name="actionExit">
+  <action name="actionQuit">
    <property name="text">
-    <string>Exit</string>
+    <string>Quit</string>
    </property>
   </action>
  </widget>

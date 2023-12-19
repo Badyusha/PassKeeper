@@ -13,8 +13,9 @@ Registration::~Registration() { delete this->ui; }
 void Registration::on_SignIn_clicked() {
 	Database::getConnection()->setSchema("PassKeeper");
 
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword, Id from Users where Login = ?;"));
-
+	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword, Id "
+																				"from Users "
+																				"where Login = ?;"));
 	std::string login = this->ui->LoginInput->text().toLocal8Bit().constData();
 	Database::getPreparedStatement()->setString(1, login);
 

@@ -27,7 +27,7 @@ public:
     QLabel *WarningMessage;
     QLabel *warning;
     QLabel *ErrorCode;
-    QPushButton *SignIn;
+    QPushButton *OkButton;
 
     void setupUi(QMainWindow *WarningMessageClass)
     {
@@ -79,14 +79,14 @@ public:
         ErrorCode->setStyleSheet(QString::fromUtf8("color: rgb(255, 224, 70);"));
         ErrorCode->setScaledContents(true);
         ErrorCode->setAlignment(Qt::AlignCenter);
-        SignIn = new QPushButton(centralWidget);
-        SignIn->setObjectName("SignIn");
-        SignIn->setGeometry(QRect(112, 123, 60, 30));
+        OkButton = new QPushButton(centralWidget);
+        OkButton->setObjectName("OkButton");
+        OkButton->setGeometry(QRect(112, 123, 60, 30));
         QFont font2;
         font2.setPointSize(10);
         font2.setBold(true);
-        SignIn->setFont(font2);
-        SignIn->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        OkButton->setFont(font2);
+        OkButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	background-color: rgb(111, 106, 141);\n"
 "	border: none;\n"
 "	border-radius: 13px;\n"
@@ -101,8 +101,6 @@ public:
         WarningMessageClass->setCentralWidget(centralWidget);
 
         retranslateUi(WarningMessageClass);
-        QObject::connect(Close, &QPushButton::clicked, WarningMessageClass, qOverload<>(&QMainWindow::close));
-        QObject::connect(SignIn, &QPushButton::clicked, WarningMessageClass, qOverload<>(&QMainWindow::close));
 
         QMetaObject::connectSlotsByName(WarningMessageClass);
     } // setupUi
@@ -114,7 +112,7 @@ public:
         WarningMessage->setText(QString());
         warning->setText(QCoreApplication::translate("WarningMessageClass", "Warning!", nullptr));
         ErrorCode->setText(QString());
-        SignIn->setText(QCoreApplication::translate("WarningMessageClass", "OK", nullptr));
+        OkButton->setText(QCoreApplication::translate("WarningMessageClass", "OK", nullptr));
     } // retranslateUi
 
 };

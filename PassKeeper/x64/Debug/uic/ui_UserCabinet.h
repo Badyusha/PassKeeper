@@ -30,8 +30,8 @@ public:
     QAction *actionShow_all;
     QAction *actionFind_by;
     QAction *actionDelete;
-    QAction *actionDelete_2;
-    QAction *actionExit;
+    QAction *actionDeleteAccount;
+    QAction *actionQuit;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QLabel *Login;
@@ -58,10 +58,10 @@ public:
         actionFind_by->setObjectName("actionFind_by");
         actionDelete = new QAction(UserCabinetClass);
         actionDelete->setObjectName("actionDelete");
-        actionDelete_2 = new QAction(UserCabinetClass);
-        actionDelete_2->setObjectName("actionDelete_2");
-        actionExit = new QAction(UserCabinetClass);
-        actionExit->setObjectName("actionExit");
+        actionDeleteAccount = new QAction(UserCabinetClass);
+        actionDeleteAccount->setObjectName("actionDeleteAccount");
+        actionQuit = new QAction(UserCabinetClass);
+        actionQuit->setObjectName("actionQuit");
         centralWidget = new QWidget(UserCabinetClass);
         centralWidget->setObjectName("centralWidget");
         gridLayout = new QGridLayout(centralWidget);
@@ -129,8 +129,8 @@ public:
 
         menuBar->addAction(menuKeeper->menuAction());
         menuBar->addAction(menuAccount->menuAction());
-        menuAccount->addAction(actionDelete_2);
-        menuAccount->addAction(actionExit);
+        menuAccount->addAction(actionDeleteAccount);
+        menuAccount->addAction(actionQuit);
         menuKeeper->addAction(actionCreate_new);
         menuKeeper->addAction(actionModify);
         menuKeeper->addSeparator();
@@ -152,10 +152,10 @@ public:
         actionShow_all->setText(QCoreApplication::translate("UserCabinetClass", "Show all", nullptr));
         actionFind_by->setText(QCoreApplication::translate("UserCabinetClass", "Find by...", nullptr));
         actionDelete->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
-        actionDelete_2->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
-        actionExit->setText(QCoreApplication::translate("UserCabinetClass", "Exit", nullptr));
+        actionDeleteAccount->setText(QCoreApplication::translate("UserCabinetClass", "Delete", nullptr));
+        actionQuit->setText(QCoreApplication::translate("UserCabinetClass", "Quit", nullptr));
         Login->setText(QString());
-        RecordsCount->setText(QCoreApplication::translate("UserCabinetClass", "Your keeper records count: ", nullptr));
+        RecordsCount->setText(QString());
         menuAccount->setTitle(QCoreApplication::translate("UserCabinetClass", "Account", nullptr));
         menuKeeper->setTitle(QCoreApplication::translate("UserCabinetClass", "Keeper", nullptr));
     } // retranslateUi

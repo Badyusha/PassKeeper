@@ -133,7 +133,7 @@ QPushButton:pressed{
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="SignIn">
+   <widget class="QPushButton" name="OkButton">
     <property name="geometry">
      <rect>
       <x>112</x>
@@ -170,38 +170,5 @@ QPushButton:pressed{
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>Close</sender>
-   <signal>clicked()</signal>
-   <receiver>WarningMessageClass</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>282</x>
-     <y>13</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>282</x>
-     <y>35</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>SignIn</sender>
-   <signal>clicked()</signal>
-   <receiver>WarningMessageClass</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>143</x>
-     <y>127</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>207</x>
-     <y>133</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

@@ -23,6 +23,7 @@ public:
 
 	void errorLoginingMessage(const QString& errorMessage);
 	CONDITION enteredDataIsIncorrect();
+	int loginAlreadyExists();
 };
 
 #endif
