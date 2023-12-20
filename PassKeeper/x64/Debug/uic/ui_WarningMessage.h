@@ -34,7 +34,7 @@ public:
         if (WarningMessageClass->objectName().isEmpty())
             WarningMessageClass->setObjectName("WarningMessageClass");
         WarningMessageClass->resize(285, 170);
-        WarningMessageClass->setStyleSheet(QString::fromUtf8("background-color: rgb(70, 70, 70);"));
+        WarningMessageClass->setStyleSheet(QString::fromUtf8("background-color: rgb(90, 90, 90);"));
         centralWidget = new QWidget(WarningMessageClass);
         centralWidget->setObjectName("centralWidget");
         Close = new QPushButton(centralWidget);

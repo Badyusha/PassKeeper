@@ -17,6 +17,7 @@ class UserCabinet : public QMainWindow {
 private slots:
 	void on_actionQuit_triggered();
 	void on_actionDeleteAccount_triggered();
+	void onButtonClicked(const WARNING_MESSAGE& buttonId);
 
 public:
 	UserCabinet() : id(0), ui(nullptr) {}
