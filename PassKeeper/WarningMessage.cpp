@@ -4,6 +4,8 @@ WarningMessage::WarningMessage(QWidget *parent, const int& pressedButton_)
 	: QMainWindow(parent, Qt::FramelessWindowHint), ui(new Ui::WarningMessageClass()) {
 	ui->setupUi(this);
 	this->pressedButton = pressedButton_;
+	connect(this->ui->OkButton, SIGNAL(clicked()), this, SLOT(on_OkButton_clicked()));
+	connect(this->ui->Close, SIGNAL(clicked()), this, SLOT(on_Close_clicked()));
 }
 
 WarningMessage::~WarningMessage() {

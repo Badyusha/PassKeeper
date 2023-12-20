@@ -70,9 +70,8 @@ CONDITION UserCabinet::deleteUserFromTable(const char* query) {
 }
 
 void UserCabinet::on_actionDeleteAccount_triggered() {
-
 	if (UserCabinet::deleteUserFromTable("delete from Users "
-										 "where Users.Id = ?; ") 
+										 "where Users.Id = ?; ")
 		== CONDITION::ERROR) { return; }
 
 	if (UserCabinet::deleteUserFromTable("delete from PasswordsKeeper "
