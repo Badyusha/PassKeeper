@@ -24,6 +24,24 @@
     <Filter Include="Text Files">
       <UniqueIdentifier>{c487f172-d59c-4156-ac94-99ada4942e55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\User">
+      <UniqueIdentifier>{4dece97f-68f7-4a74-8d60-ae9d36ecb8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\User">
+      <UniqueIdentifier>{f30b1c36-977f-4f92-9b70-6e443f557b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{762e1868-74e2-4925-92b9-1a594cc2295e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Keeper">
+      <UniqueIdentifier>{7ee04bec-5a3f-4350-ad5a-496c48e5e464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Keeper">
+      <UniqueIdentifier>{a1032b55-0d44-4f85-a288-f47c4cf69cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{4e696322-6c42-4adf-850b-f12d4c46d0ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Registration.qrc">
@@ -32,45 +50,45 @@
     <QtUic Include="Registration.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="Registration.hpp">
-      <Filter>Header Files</Filter>
-    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Functions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Database.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WarningMessage.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="RegisterUser.cpp">
+      <Filter>Source Files\User</Filter>
     </ClCompile>
     <ClCompile Include="Registration.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RegisterUser.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\User</Filter>
     </ClCompile>
     <ClCompile Include="UserCabinet.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\User</Filter>
+    </ClCompile>
+    <ClCompile Include="Record.cpp">
+      <Filter>Source Files\Keeper</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="WarningMessage.cpp">
+      <Filter>Source Files\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libraries.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Functions.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Database.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\System</Filter>
     </ClInclude>
     <ClInclude Include="Enums.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.hpp">
+      <Filter>Header Files\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -79,14 +97,20 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="WarningMessage.hpp">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="RegisterUser.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\User</Filter>
+    </QtMoc>
+    <QtMoc Include="Registration.hpp">
+      <Filter>Header Files\User</Filter>
     </QtMoc>
     <QtMoc Include="UserCabinet.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\User</Filter>
+    </QtMoc>
+    <QtMoc Include="WarningMessage.hpp">
+      <Filter>Header Files\System</Filter>
+    </QtMoc>
+    <QtMoc Include="Record.hpp">
+      <Filter>Header Files\Keeper</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +121,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="UserCabinet.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Record.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

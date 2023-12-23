@@ -1,8 +1,8 @@
 #ifndef USERCABINET_HPP
 #define USERCABINET_HPP
 
-#include "ui_UserCabinet.h"
 #include "Registration.hpp"
+#include "Record.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class UserCabinetClass; };
@@ -17,6 +17,9 @@ class UserCabinet : public QMainWindow {
 private slots:
 	void on_actionQuit_triggered();
 	void on_actionDeleteAccount_triggered();
+
+	void on_actionCreate_new_triggered();
+
 	void onButtonClicked(const WARNING_MESSAGE& buttonId);
 
 public:

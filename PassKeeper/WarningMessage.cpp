@@ -1,5 +1,4 @@
 #include "WarningMessage.hpp"
-#include "qdialog.h"
 
 
 WarningMessage::WarningMessage(QWidget *parent)

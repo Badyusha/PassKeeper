@@ -1,55 +1,115 @@
-﻿  UserCabinet.cpp
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe21 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe23 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe26 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe29 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe2c that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe2f that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe32 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe36 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe3a that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe3d that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe40 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xe43 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf5c that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf5e that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf61 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf64 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf67 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf6a that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf6e that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf72 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf75 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf79 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfec that is illegal in the current source character set (codepage 65001).
+﻿  Database.cpp
+  Functions.cpp
+  Record.cpp
+  RegisterUser.cpp
+  Registration.cpp
+  UserCabinet.cpp
+  WarningMessage.cpp
+  main.cpp
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2be that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2c0 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2c3 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2c6 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2c9 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2cd that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2d0 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2d4 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2d8 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2db that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfca that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2df that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfcc that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x2e3 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfcf that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x32f that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfd2 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x331 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x334 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfd5 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x337 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfd8 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x33a that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x33d that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfdb that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x340 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfde that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x344 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfe1 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x345 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfe4 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x348 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x34b that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x34e that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x352 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x355 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a1 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a3 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3a6 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3aa that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3ae that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3b1 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3b2 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3b5 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3b6 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x413 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x415 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x418 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x41c that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x41f that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x422 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x425 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x426 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x429 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x42a that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x42c that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x42f that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\Functions.cpp(1,1): warning C4828: The file contains a character starting at offset 0x433 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfe7 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfe8 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfeb that is illegal in the current source character set (codepage 65001).
 D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfee that is illegal in the current source character set (codepage 65001).
 D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xff1 that is illegal in the current source character set (codepage 65001).
 D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xff2 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xff5 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xff9 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xffc that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfff that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1002 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1005 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1009 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x100d that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1011 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1014 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1017 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10de that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10e0 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10e3 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10e6 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10e9 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10ec that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10ef that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10f2 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10f5 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10f8 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10fb that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10fc that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x10ff that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1102 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1105 that is illegal in the current source character set (codepage 65001).
-D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1106 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1072 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1074 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1077 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x107a that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x107d that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1080 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1083 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1087 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x108b that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x108e that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1091 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1094 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11a9 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11ab that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11ae that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11b1 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11b4 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11b7 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11bb that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11bf that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11c2 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x11c6 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1237 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1239 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x123c that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x123d that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1240 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1244 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1247 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x124a that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x124d that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1250 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1254 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1258 that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x125c that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x125f that is illegal in the current source character set (codepage 65001).
+D:\training_gym\PassKeeper\PassKeeper\UserCabinet.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1262 that is illegal in the current source character set (codepage 65001).
+  moc_Record.cpp
+  moc_RegisterUser.cpp
+  moc_Registration.cpp
+  moc_UserCabinet.cpp
+  moc_WarningMessage.cpp
   PassKeeper.vcxproj -> D:\training_gym\PassKeeper\x64\Debug\PassKeeper.exe

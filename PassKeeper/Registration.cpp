@@ -11,16 +11,16 @@ Registration::~Registration() { delete this->ui; }
 
 
 void Registration::on_SignIn_clicked() {
-	Database::getConnection()->setSchema("PassKeeper");
-
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword, Id "
-																				"from Users "
-																				"where Login = ?;"));
-	std::string login = this->ui->LoginInput->text().toLocal8Bit().constData();
-	Database::getPreparedStatement()->setString(1, login);
-
-
+	std::string login;
 	try {
+		Database::getConnection()->setSchema("PassKeeper");
+
+		Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Login, HashedPassword, Id "
+																					"from Users "
+																					"where Login = ?;"));
+		login = this->ui->LoginInput->text().toLocal8Bit().constData();
+		Database::getPreparedStatement()->setString(1, login);
+
 		Database::setResultSet(Database::getPreparedStatement()->executeQuery());
 		Database::getResultSet()->next();
 		if (Database::getResultSet()->getString(1) != login ||
@@ -56,7 +56,6 @@ void Registration::on_SignIn_clicked() {
 	
 	// redirect to the menu
 	UserCabinet* userCab = new UserCabinet(Database::getResultSet()->getUInt64(3));
-	userCab->getUi()->Login->setText((login.c_str()));
 	userCab->show();
 }
 

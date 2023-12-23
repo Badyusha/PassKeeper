@@ -27,8 +27,9 @@
 // all ui's
 #include "ui_Registration.h"
 #include "ui_WarningMessage.h"
-#include "ui_ClientMainMenu.h"
 #include "ui_RegisterUser.h"
+#include "ui_UserCabinet.h"
+#include "ui_Record.h"
 
 // enums
 #include "Enums.hpp"

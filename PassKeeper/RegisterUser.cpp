@@ -22,14 +22,14 @@ void RegisterUser::errorLoginingMessage(const QString& errorMessage) {
 }
 
 int RegisterUser::loginAlreadyExists() {
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select count(*) "
-																				"from Users "
-																				"where Login = ?;"));
-
-	std::string login = this->ui->LoginInput->text().toLocal8Bit().data();
-	Database::getPreparedStatement()->setString(1, login);
-
 	try {
+		Database::setPreparedStatement(Database::getConnection()->prepareStatement("select count(*) "
+																					"from Users "
+																					"where Login = ?;"));
+
+		std::string login = this->ui->LoginInput->text().toLocal8Bit().data();
+		Database::getPreparedStatement()->setString(1, login);
+
 		Database::setResultSet(Database::getPreparedStatement()->executeQuery());
 		Database::getResultSet()->next();
 	}
@@ -90,17 +90,19 @@ CONDITION RegisterUser::enteredDataIsIncorrect() {
 }
 
 void RegisterUser::on_SignUp_clicked() {
-	Database::getConnection()->setSchema("PassKeeper");
 
-	if (enteredDataIsIncorrect()) { return; }
-
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("insert into Users(Login, HashedPassword) values (?, ?);"));
-	
-	std::string login = this->ui->LoginInput->text().toLocal8Bit().constData();
-	Database::getPreparedStatement()->setString(1, login);
-	Database::getPreparedStatement()->setString(2, hashEncrypt(this->ui->PasswordInput->text().toLocal8Bit().constData()));
-
+	std::string login;
 	try {
+		Database::getConnection()->setSchema("PassKeeper");
+
+		if (enteredDataIsIncorrect()) { return; }
+
+		Database::setPreparedStatement(Database::getConnection()->prepareStatement("insert into Users(Login, HashedPassword) values (?, ?);"));
+	
+		login = this->ui->LoginInput->text().toLocal8Bit().constData();
+		Database::getPreparedStatement()->setString(1, login);
+		Database::getPreparedStatement()->setString(2, hashEncrypt(this->ui->PasswordInput->text().toLocal8Bit().constData()));
+
 		Database::getPreparedStatement()->executeQuery();
 	}
 	catch (sql::SQLException error) {
@@ -117,10 +119,10 @@ void RegisterUser::on_SignUp_clicked() {
 	//this->ui->LoginStatus->setStyleSheet("color: rgb(170, 255, 127);"); // set green color text
 	//this->ui->LoginStatus->setText("Successfully");
 
-	Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Id from Users where Login = ?;"));
-	Database::getPreparedStatement()->setString(1, this->ui->LoginInput->text().toLocal8Bit().constData());
-
 	try {
+		Database::setPreparedStatement(Database::getConnection()->prepareStatement("select Id from Users where Login = ?;"));
+		Database::getPreparedStatement()->setString(1, this->ui->LoginInput->text().toLocal8Bit().constData());
+
 		Database::setResultSet(Database::getPreparedStatement()->executeQuery());
 		Database::getResultSet()->next();
 	}
