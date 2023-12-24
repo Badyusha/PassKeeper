@@ -41,14 +41,20 @@ struct qt_meta_stringdata_CLASSRecordENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSRecordENDCLASS = QtMocHelpers::stringData(
     "Record",
     "on_Close_clicked",
-    ""
+    "",
+    "on_SaveButton_clicked",
+    "on_ClearButton_clicked",
+    "on_ExitButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSRecordENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[12];
     char stringdata0[7];
     char stringdata1[17];
     char stringdata2[1];
+    char stringdata3[22];
+    char stringdata4[23];
+    char stringdata5[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSRecordENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -56,11 +62,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSRecordENDCLASS_t qt_meta_string
     {
         QT_MOC_LITERAL(0, 6),  // "Record"
         QT_MOC_LITERAL(7, 16),  // "on_Close_clicked"
-        QT_MOC_LITERAL(24, 0)   // ""
+        QT_MOC_LITERAL(24, 0),  // ""
+        QT_MOC_LITERAL(25, 21),  // "on_SaveButton_clicked"
+        QT_MOC_LITERAL(47, 22),  // "on_ClearButton_clicked"
+        QT_MOC_LITERAL(70, 21)   // "on_ExitButton_clicked"
     },
     "Record",
     "on_Close_clicked",
-    ""
+    "",
+    "on_SaveButton_clicked",
+    "on_ClearButton_clicked",
+    "on_ExitButton_clicked"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -72,7 +84,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRecordENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,9 +92,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSRecordENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   38,    2, 0x08,    1 /* Private */,
+       3,    0,   39,    2, 0x08,    2 /* Private */,
+       4,    0,   40,    2, 0x08,    3 /* Private */,
+       5,    0,   41,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -98,6 +116,12 @@ Q_CONSTINIT const QMetaObject Record::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Record, std::true_type>,
         // method 'on_Close_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_SaveButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_ClearButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_ExitButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -110,6 +134,9 @@ void Record::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         (void)_t;
         switch (_id) {
         case 0: _t->on_Close_clicked(); break;
+        case 1: _t->on_SaveButton_clicked(); break;
+        case 2: _t->on_ClearButton_clicked(); break;
+        case 3: _t->on_ExitButton_clicked(); break;
         default: ;
         }
     }
@@ -135,13 +162,13 @@ int Record::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 4;
     }
     return _id;
 }

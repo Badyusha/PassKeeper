@@ -155,7 +155,7 @@ color: rgb(255, 255, 255);</string>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="AdditioanlInfoLabel">
+      <widget class="QLineEdit" name="AdditionalInfoLabel">
        <property name="font">
         <font>
          <bold>true</bold>
@@ -302,7 +302,7 @@ QPushButton:pressed{
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="ErrorLabel">
+   <widget class="QLabel" name="StatusLabel">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -320,7 +320,7 @@ QPushButton:pressed{
      <string notr="true">color: rgb(255, 224, 70);</string>
     </property>
     <property name="text">
-     <string>Error</string>
+     <string/>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

@@ -23,9 +23,9 @@ int main(int argc, char *argv[]) {
 
     input.close();
 
-    Database* database = new Database(decrypt(server, key).c_str(),
-                                      decrypt(username, key).c_str(),
-                                      decrypt(password, key).c_str());
+    Database* database = new Database(decryptDBSI(server, key).c_str(),
+                                      decryptDBSI(username, key).c_str(),
+                                      decryptDBSI(password, key).c_str());
 
     Registration* registartion = new Registration();
     if (database->isConnected()) { registartion->show(); }

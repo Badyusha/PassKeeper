@@ -36,12 +36,12 @@ public:
     QLabel *Password;
     QLineEdit *PasswordLabel;
     QLabel *AddItionalInfo;
-    QLineEdit *AdditioanlInfoLabel;
+    QLineEdit *AdditionalInfoLabel;
     QPushButton *SaveButton;
     QPushButton *ClearButton;
     QPushButton *ExitButton;
     QPushButton *Close;
-    QLabel *ErrorLabel;
+    QLabel *StatusLabel;
 
     void setupUi(QMainWindow *RecordClass)
     {
@@ -128,13 +128,13 @@ public:
 
         verticalLayout->addWidget(AddItionalInfo);
 
-        AdditioanlInfoLabel = new QLineEdit(verticalLayoutWidget);
-        AdditioanlInfoLabel->setObjectName("AdditioanlInfoLabel");
-        AdditioanlInfoLabel->setFont(font);
-        AdditioanlInfoLabel->setStyleSheet(QString::fromUtf8("border:2px solid rgb(111, 106, 141);\n"
+        AdditionalInfoLabel = new QLineEdit(verticalLayoutWidget);
+        AdditionalInfoLabel->setObjectName("AdditionalInfoLabel");
+        AdditionalInfoLabel->setFont(font);
+        AdditionalInfoLabel->setStyleSheet(QString::fromUtf8("border:2px solid rgb(111, 106, 141);\n"
 "color: rgb(255, 255, 255);"));
 
-        verticalLayout->addWidget(AdditioanlInfoLabel);
+        verticalLayout->addWidget(AdditionalInfoLabel);
 
         SaveButton = new QPushButton(centralWidget);
         SaveButton->setObjectName("SaveButton");
@@ -203,12 +203,12 @@ public:
         icon.addFile(QString::fromUtf8("../icons/cross.png"), QSize(), QIcon::Normal, QIcon::Off);
         Close->setIcon(icon);
         Close->setIconSize(QSize(12, 12));
-        ErrorLabel = new QLabel(centralWidget);
-        ErrorLabel->setObjectName("ErrorLabel");
-        ErrorLabel->setGeometry(QRect(10, 350, 531, 20));
-        ErrorLabel->setFont(font);
-        ErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 224, 70);"));
-        ErrorLabel->setAlignment(Qt::AlignCenter);
+        StatusLabel = new QLabel(centralWidget);
+        StatusLabel->setObjectName("StatusLabel");
+        StatusLabel->setGeometry(QRect(10, 350, 531, 20));
+        StatusLabel->setFont(font);
+        StatusLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 224, 70);"));
+        StatusLabel->setAlignment(Qt::AlignCenter);
         RecordClass->setCentralWidget(centralWidget);
 
         retranslateUi(RecordClass);
@@ -228,7 +228,7 @@ public:
         ClearButton->setText(QCoreApplication::translate("RecordClass", "Clear", nullptr));
         ExitButton->setText(QCoreApplication::translate("RecordClass", "Exit", nullptr));
         Close->setText(QString());
-        ErrorLabel->setText(QCoreApplication::translate("RecordClass", "Error", nullptr));
+        StatusLabel->setText(QString());
     } // retranslateUi
 
 };

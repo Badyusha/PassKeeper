@@ -7,6 +7,9 @@
 #include <fstream>
 #include <stdio.h>
 #include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <algorithm>
 
 // libs to create wins
 #include <QtWidgets/QMainWindow>
@@ -19,10 +22,12 @@
 
 // to encrypt data
 #include <openssl/sha.h>
-#include <openssl/evp.h>
 #include <openssl/rand.h>
-#include <openssl/err.h>
 #include <openssl/aes.h>
+#include <openssl/evp.h>
+#include <openssl/aes.h>
+#include <openssl/bio.h>
+#include <openssl/buffer.h>
 
 // all ui's
 #include "ui_Registration.h"

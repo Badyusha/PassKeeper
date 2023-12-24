@@ -3,6 +3,7 @@
 
 #include "UserCabinet.hpp"
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class RecordClass; };
 QT_END_NAMESPACE
@@ -15,10 +16,13 @@ class Record : public QMainWindow {
 
 private slots:
 	void on_Close_clicked();
+	void on_SaveButton_clicked();
+	void on_ClearButton_clicked();
+	void on_ExitButton_clicked();
+
 public:
 	Record(unsigned int& userId_, QWidget *parent = nullptr);
 	~Record();
-
 };
 
 #endif

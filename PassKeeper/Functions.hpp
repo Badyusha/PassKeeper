@@ -10,10 +10,23 @@ int connectToDatabase(const std::string& server, const std::string& username, co
 std::string hashEncrypt(const std::string& data);
 
 
+std::string decryptDBSI(const std::string& cipher_text, const std::string& key);
 
-std::string encrypt(const std::string& plain_text, const std::string& key);
 
-std::string decrypt(const std::string& cipher_text, const std::string& key);
+
+std::string encrypt(const std::string& plain_text, const std::string& key, const std::string& iv);
+
+std::string decrypt(const std::string& cipher_text, const std::string& key, const std::string& iv);
+
+
+// std::string getEncryptionKey();
+
+
+void encryptKeeperRecordData(std::string& keeperName, std::string& login, std::string& email,
+							 std::string& password, std::string& additionalInfo);
+
+void decryptKeeperRecordData(std::string& keeperName, std::string& login, std::string& email,
+							 std::string& password, std::string& additionalInfo);
 
 
 #endif
