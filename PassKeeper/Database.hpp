@@ -21,8 +21,6 @@ public:
 			 const sql::PreparedStatement* pstmt_ = nullptr, const sql::ResultSet* result_ = nullptr);
 	~Database();
 
-
-
 	void setServer(const char* server_) { this->server = server_; }
 	void setUsername(const char* username_) { this->username = username_; }
 	void setPassword(const char* password_) { this->password = password_; }
@@ -32,8 +30,6 @@ public:
 	static void setResultSet(sql::ResultSet* result_) { result = result_; }
 	static void setPreparedStatement(sql::PreparedStatement* pstmt_) { pstmt = pstmt_; }
 
-
-	
 	const char* getServer() const { return this->server; }
 	const char* getUsername() const { return this->username; }
 	const char* getPassword() const { return this->password; }

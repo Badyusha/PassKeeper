@@ -34,8 +34,8 @@ public:
     QAction *actionQuit;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QLabel *Login;
     QSpacerItem *horizontalSpacer;
+    QLabel *Login;
     QSpacerItem *verticalSpacer;
     QLabel *RecordsCount;
     QMenuBar *menuBar;
@@ -68,6 +68,10 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName("gridLayout");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 2, 2, 1, 1);
+
         Login = new QLabel(centralWidget);
         Login->setObjectName("Login");
         Login->setEnabled(true);
@@ -83,10 +87,6 @@ public:
         Login->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
 
         gridLayout->addWidget(Login, 2, 0, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 2, 1, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 

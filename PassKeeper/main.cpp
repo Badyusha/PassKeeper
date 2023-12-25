@@ -14,18 +14,19 @@ int main(int argc, char *argv[]) {
         return a.exec();
     }
 
-    std::string server, username, password, key;
+    std::string server, username, password, key, iv;
 
-    getline(input, server);
-    getline(input, username);
-    getline(input, password);
-    getline(input, key);
+    std::getline(input, server);
+    std::getline(input, username);
+    std::getline(input, password);
+    std::getline(input, key);
+    std::getline(input, iv);
 
     input.close();
 
-    Database* database = new Database(decryptDBSI(server, key).c_str(),
-                                      decryptDBSI(username, key).c_str(),
-                                      decryptDBSI(password, key).c_str());
+    Database* database = new Database(decrypt(server, key, iv).c_str(),
+                                      decrypt(username, key, iv).c_str(),
+                                      decrypt(password, key, iv).c_str());
 
     Registration* registartion = new Registration();
     if (database->isConnected()) { registartion->show(); }

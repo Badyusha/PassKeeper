@@ -154,3 +154,8 @@ void UserCabinet::on_actionCreate_new_triggered() {
 	Record* record = new Record(this->id);
 	record->show();
 }
+
+void UserCabinet::on_actionModify_triggered() {
+	this->hide();
+
+}

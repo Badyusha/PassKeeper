@@ -19,6 +19,7 @@ private slots:
 	void on_actionDeleteAccount_triggered();
 
 	void on_actionCreate_new_triggered();
+	void on_actionModify_triggered();
 
 	void onButtonClicked(const WARNING_MESSAGE& buttonId);
 
