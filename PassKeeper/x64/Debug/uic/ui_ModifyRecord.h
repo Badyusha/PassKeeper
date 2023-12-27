@@ -11,9 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -26,8 +28,8 @@ public:
     QVBoxLayout *verticalLayout;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
-    QVBoxLayout *verticalLayout_2;
-    QFrame *frame;
+    QHBoxLayout *horizontalLayout;
+    QTableView *tableView;
 
     void setupUi(QMainWindow *ModifyRecordClass)
     {
@@ -119,18 +121,16 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1218, 1218));
-        verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_2->setObjectName("verticalLayout_2");
-        frame = new QFrame(scrollAreaWidgetContents);
-        frame->setObjectName("frame");
-        frame->setMinimumSize(QSize(1200, 1200));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 840, 5018));
+        horizontalLayout = new QHBoxLayout(scrollAreaWidgetContents);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName("horizontalLayout");
+        tableView = new QTableView(scrollAreaWidgetContents);
+        tableView->setObjectName("tableView");
+        tableView->setMinimumSize(QSize(0, 5000));
 
-        verticalLayout_2->addWidget(frame);
+        horizontalLayout->addWidget(tableView);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
 

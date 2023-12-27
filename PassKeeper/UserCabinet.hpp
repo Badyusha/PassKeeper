@@ -3,6 +3,7 @@
 
 #include "Registration.hpp"
 #include "Record.hpp"
+#include "ModifyRecord.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class UserCabinetClass; };

@@ -104,24 +104,18 @@ QScrollBar:horizontal {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>1218</width>
-         <height>1218</height>
+         <width>840</width>
+         <height>5018</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QFrame" name="frame">
+         <widget class="QTableView" name="tableView">
           <property name="minimumSize">
            <size>
-            <width>1200</width>
-            <height>1200</height>
+            <width>0</width>
+            <height>5000</height>
            </size>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
           </property>
          </widget>
         </item>
