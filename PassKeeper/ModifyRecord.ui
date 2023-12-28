@@ -117,6 +117,16 @@ QScrollBar:horizontal {
             <height>5000</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+text-align: center;
+border: none;
+font: bold;
+
+QTableView::item:selected{
+	background-color: rgb(101, 97, 129);
+}</string>
+          </property>
          </widget>
         </item>
        </layout>

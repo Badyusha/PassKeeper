@@ -129,6 +129,14 @@ public:
         tableView = new QTableView(scrollAreaWidgetContents);
         tableView->setObjectName("tableView");
         tableView->setMinimumSize(QSize(0, 5000));
+        tableView->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"text-align: center;\n"
+"border: none;\n"
+"font: bold;\n"
+"\n"
+"QTableView::item:selected{\n"
+"	background-color: rgb(101, 97, 129);\n"
+"}"));
 
         horizontalLayout->addWidget(tableView);
 
