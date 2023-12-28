@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QTableView>
@@ -28,6 +29,7 @@ public:
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
+    QLabel *ErrorLabel;
     QTableView *tableView;
 
     void setupUi(QMainWindow *ShowRecordClass)
@@ -117,11 +119,21 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 827, 5018));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 827, 5040));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName("verticalLayout_2");
+        ErrorLabel = new QLabel(scrollAreaWidgetContents);
+        ErrorLabel->setObjectName("ErrorLabel");
+        QFont font;
+        font.setBold(true);
+        ErrorLabel->setFont(font);
+        ErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 224, 70)"));
+        ErrorLabel->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(ErrorLabel);
+
         tableView = new QTableView(scrollAreaWidgetContents);
         tableView->setObjectName("tableView");
         tableView->setMinimumSize(QSize(0, 5000));
@@ -150,6 +162,7 @@ public:
     void retranslateUi(QMainWindow *ShowRecordClass)
     {
         ShowRecordClass->setWindowTitle(QCoreApplication::translate("ShowRecordClass", "ShowRecord", nullptr));
+        ErrorLabel->setText(QString());
     } // retranslateUi
 
 };

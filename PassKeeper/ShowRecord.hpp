@@ -13,15 +13,18 @@ class ShowRecord : public QMainWindow {
 
 	Ui::ShowRecordClass *ui;
 	QStandardItemModel* model;
+	unsigned int userId;
+
 private slots:
 
 public:
-	ShowRecord(QWidget *parent = nullptr);
+	ShowRecord(const unsigned int& userId, QWidget *parent = nullptr);
 	~ShowRecord();
 
 	void addData(const QString& associatedName, const QString& login, const QString& email,
 				 const QString& password, const QString& additionalInfo);
 	void setHeaders();
+	void getDataFromTable();
 };
 
 #endif

@@ -102,10 +102,28 @@ QScrollBar:horizontal {
          <x>0</x>
          <y>0</y>
          <width>827</width>
-         <height>5018</height>
+         <height>5040</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="ErrorLabel">
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 224, 70)</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QTableView" name="tableView">
           <property name="minimumSize">

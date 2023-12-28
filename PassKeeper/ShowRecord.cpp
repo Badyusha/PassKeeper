@@ -1,13 +1,13 @@
 #include "ShowRecord.hpp"
 
-ShowRecord::ShowRecord(QWidget *parent)
-		   : QMainWindow(parent), ui(new Ui::ShowRecordClass())
+ShowRecord::ShowRecord(const unsigned int& userId_, QWidget *parent)
+		   : QMainWindow(parent), ui(new Ui::ShowRecordClass()), userId(userId_)
 {
 	ui->setupUi(this);
 
     ShowRecord::setHeaders();
 
-    this->addData("John Doe", "johndoe", "john@example.com", "securePassword", "Additional Info");
+    getDataFromTable();
 }
 
 ShowRecord::~ShowRecord() {	delete ui; }
@@ -49,4 +49,32 @@ void ShowRecord::addData(const QString& associatedName, const QString& login, co
     }
 
     model->appendRow(row);
+}
+
+void ShowRecord::getDataFromTable() {
+    try {
+        Database::setPreparedStatement(Database::getConnection()->prepareStatement("select KeeperName, KeeperLogin, KeeperEmail, KeeperPassword, KeeperAdditionalInfo "
+																				   "from PasswordsKeeper "
+                                                                                   "where UserId = ?"));
+        Database::getPreparedStatement()->setInt(1, this->userId);
+        Database::setResultSet(Database::getPreparedStatement()->executeQuery());
+    }
+    catch (sql::SQLException error) {
+        Database::setPreparedStatement(nullptr);
+        Database::setResultSet(nullptr);
+
+        this->ui->ErrorLabel->setText("Unable to get data from database!");
+        return;
+    }
+
+    std::pair<std::string, std::string> keyNiv = getKeyNiv();
+
+    for (;Database::getResultSet()->next();) {
+        ShowRecord::addData(decrypt(Database::getResultSet()->getString(1), keyNiv.first, keyNiv.second).c_str(),
+                            decrypt(Database::getResultSet()->getString(2), keyNiv.first, keyNiv.second).c_str(),
+                            decrypt(Database::getResultSet()->getString(3), keyNiv.first, keyNiv.second).c_str(),
+                            decrypt(Database::getResultSet()->getString(4), keyNiv.first, keyNiv.second).c_str(),
+                            decrypt(Database::getResultSet()->getString(5), keyNiv.first, keyNiv.second).c_str());
+    }
+
 }

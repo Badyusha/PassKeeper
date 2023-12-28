@@ -77,7 +77,7 @@
       <Filter>Source Files\System</Filter>
     </ClCompile>
     <ClCompile Include="ShowRecord.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Keeper</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +116,7 @@
       <Filter>Header Files\Keeper</Filter>
     </QtMoc>
     <QtMoc Include="ShowRecord.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Keeper</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

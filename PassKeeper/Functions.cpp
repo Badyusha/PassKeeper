@@ -138,29 +138,52 @@ std::string decrypt(const std::string& ciphertext, const std::string& key, const
     return plaintext.substr(0, plaintext_len);
 }
 
+std::pair<std::string, std::string> getKeyNiv() {
+    std::ifstream input("DBSI.txt", std::ios::in);
+    if (!input.is_open()) {
+        input.close();
+        WarningMessage* warning = new WarningMessage();
+        warning->getUi()->WarningMessage->setText("Cannot get server info to connect to the database!");
+        warning->getUi()->ErrorCode->setText("Error code: " + QString::number(CONDITION::ERROR));
+        warning->show();
+        return {};
+    }
+
+    std::string key, iv;
+    getline(input, key);
+    getline(input, key);
+    getline(input, key);
+    getline(input, key);
+    getline(input, iv);
+
+    return { key, iv };
+}
+
 void encryptKeeperRecordData(std::string& keeperName, std::string& login, std::string& email,
-                                    std::string& password, std::string& additionalInfo)
+                             std::string& password, std::string& additionalInfo)
 {
-    std::string key = "0123456789abcdef0123456789abcdef";
-    std::string iv = "0123456789abcdef";
+    std::pair<std::string, std::string> keyNiv = getKeyNiv();
 
-    keeperName = encrypt(keeperName, key, iv);
-    password = encrypt(password, key, iv);
+    if (keyNiv.first == "") { return; }
 
-    if (!login.empty()) { login = encrypt(login, key, iv); }
-    if (!email.empty()) { email = encrypt(email, key, iv); }
-    if (!additionalInfo.empty()) { additionalInfo = encrypt(additionalInfo, key, iv); }
+    keeperName = encrypt(keeperName, keyNiv.first, keyNiv.second);
+    password = encrypt(password, keyNiv.first, keyNiv.second);
+
+    if (!login.empty()) { login = encrypt(login, keyNiv.first, keyNiv.second); }
+    if (!email.empty()) { email = encrypt(email, keyNiv.first, keyNiv.second); }
+    if (!additionalInfo.empty()) { additionalInfo = encrypt(additionalInfo, keyNiv.first, keyNiv.second); }
 }
 
 void decryptKeeperRecordData(std::string& keeperName, std::string& login, std::string& email,
-    std::string& password, std::string& additionalInfo)
+                             std::string& password, std::string& additionalInfo)
 {
-    std::string key = "0123456789abcdef0123456789abcdef";
-    std::string iv = "0123456789abcdef";
+    std::pair<std::string, std::string> keyNiv = getKeyNiv();
 
-    keeperName = decrypt(keeperName, key, iv);
-    password = decrypt(password, key, iv);
-    login = decrypt(login, key, iv);
-    email = decrypt(email, key, iv);
-    additionalInfo = decrypt(additionalInfo, key, iv);
+    if (keyNiv.first == "") { return; }
+
+    keeperName = decrypt(keeperName, keyNiv.first, keyNiv.second);
+    password = decrypt(password, keyNiv.first, keyNiv.second);
+    login = decrypt(login, keyNiv.first, keyNiv.second);
+    email = decrypt(email, keyNiv.first, keyNiv.second);
+    additionalInfo = decrypt(additionalInfo, keyNiv.first, keyNiv.second);
 }
