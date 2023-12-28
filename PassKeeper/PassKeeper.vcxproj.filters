@@ -76,7 +76,7 @@
     <ClCompile Include="WarningMessage.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
-    <ClCompile Include="ModifyRecord.cpp">
+    <ClCompile Include="ShowRecord.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -115,7 +115,7 @@
     <QtMoc Include="Record.hpp">
       <Filter>Header Files\Keeper</Filter>
     </QtMoc>
-    <QtMoc Include="ModifyRecord.hpp">
+    <QtMoc Include="ShowRecord.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -132,7 +132,7 @@
     <QtUic Include="Record.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="ModifyRecord.ui">
+    <QtUic Include="ShowRecord.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

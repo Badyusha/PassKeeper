@@ -44,7 +44,7 @@ static constexpr auto qt_meta_stringdata_CLASSUserCabinetENDCLASS = QtMocHelpers
     "",
     "on_actionDeleteAccount_triggered",
     "on_actionCreate_new_triggered",
-    "on_actionModify_triggered",
+    "on_actionShow_all_triggered",
     "onButtonClicked",
     "WARNING_MESSAGE",
     "buttonId"
@@ -57,7 +57,7 @@ struct qt_meta_stringdata_CLASSUserCabinetENDCLASS_t {
     char stringdata2[1];
     char stringdata3[33];
     char stringdata4[30];
-    char stringdata5[26];
+    char stringdata5[28];
     char stringdata6[16];
     char stringdata7[16];
     char stringdata8[9];
@@ -71,17 +71,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSUserCabinetENDCLASS_t qt_meta_s
         QT_MOC_LITERAL(36, 0),  // ""
         QT_MOC_LITERAL(37, 32),  // "on_actionDeleteAccount_triggered"
         QT_MOC_LITERAL(70, 29),  // "on_actionCreate_new_triggered"
-        QT_MOC_LITERAL(100, 25),  // "on_actionModify_triggered"
-        QT_MOC_LITERAL(126, 15),  // "onButtonClicked"
-        QT_MOC_LITERAL(142, 15),  // "WARNING_MESSAGE"
-        QT_MOC_LITERAL(158, 8)   // "buttonId"
+        QT_MOC_LITERAL(100, 27),  // "on_actionShow_all_triggered"
+        QT_MOC_LITERAL(128, 15),  // "onButtonClicked"
+        QT_MOC_LITERAL(144, 15),  // "WARNING_MESSAGE"
+        QT_MOC_LITERAL(160, 8)   // "buttonId"
     },
     "UserCabinet",
     "on_actionQuit_triggered",
     "",
     "on_actionDeleteAccount_triggered",
     "on_actionCreate_new_triggered",
-    "on_actionModify_triggered",
+    "on_actionShow_all_triggered",
     "onButtonClicked",
     "WARNING_MESSAGE",
     "buttonId"
@@ -135,7 +135,7 @@ Q_CONSTINIT const QMetaObject UserCabinet::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_actionCreate_new_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_actionModify_triggered'
+        // method 'on_actionShow_all_triggered'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -153,7 +153,7 @@ void UserCabinet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 0: _t->on_actionQuit_triggered(); break;
         case 1: _t->on_actionDeleteAccount_triggered(); break;
         case 2: _t->on_actionCreate_new_triggered(); break;
-        case 3: _t->on_actionModify_triggered(); break;
+        case 3: _t->on_actionShow_all_triggered(); break;
         case 4: _t->onButtonClicked((*reinterpret_cast< std::add_pointer_t<WARNING_MESSAGE>>(_a[1]))); break;
         default: ;
         }

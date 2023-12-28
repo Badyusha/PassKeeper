@@ -3,7 +3,8 @@
 
 #include "Registration.hpp"
 #include "Record.hpp"
-#include "ModifyRecord.hpp"
+#include "ShowRecord.hpp"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class UserCabinetClass; };
@@ -20,7 +21,7 @@ private slots:
 	void on_actionDeleteAccount_triggered();
 
 	void on_actionCreate_new_triggered();
-	void on_actionModify_triggered();
+	void on_actionShow_all_triggered();
 
 	void onButtonClicked(const WARNING_MESSAGE& buttonId);
 

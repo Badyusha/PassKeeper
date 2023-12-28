@@ -133,11 +133,8 @@ background-color: rgb(101, 97, 129);</string>
      <string>Keeper</string>
     </property>
     <addaction name="actionCreate_new"/>
-    <addaction name="actionModify"/>
-    <addaction name="separator"/>
     <addaction name="actionShow_all"/>
     <addaction name="actionFind_by"/>
-    <addaction name="separator"/>
     <addaction name="actionDelete"/>
    </widget>
    <addaction name="menuKeeper"/>

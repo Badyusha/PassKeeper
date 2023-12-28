@@ -132,11 +132,8 @@ public:
         menuAccount->addAction(actionDeleteAccount);
         menuAccount->addAction(actionQuit);
         menuKeeper->addAction(actionCreate_new);
-        menuKeeper->addAction(actionModify);
-        menuKeeper->addSeparator();
         menuKeeper->addAction(actionShow_all);
         menuKeeper->addAction(actionFind_by);
-        menuKeeper->addSeparator();
         menuKeeper->addAction(actionDelete);
 
         retranslateUi(UserCabinetClass);

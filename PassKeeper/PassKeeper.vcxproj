@@ -112,20 +112,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Database.cpp" />
-    <ClCompile Include="ModifyRecord.cpp" />
     <ClCompile Include="Record.cpp" />
     <ClCompile Include="RegisterUser.cpp" />
     <ClCompile Include="Registration.cpp" />
+    <ClCompile Include="ShowRecord.cpp" />
     <ClCompile Include="UserCabinet.cpp" />
     <ClCompile Include="WarningMessage.cpp" />
     <QtRcc Include="Registration.qrc" />
-    <QtUic Include="ModifyRecord.ui" />
     <QtUic Include="Record.ui" />
     <QtUic Include="RegisterUser.ui" />
     <QtUic Include="Registration.ui" />
     <QtMoc Include="Registration.hpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="ShowRecord.ui" />
     <QtUic Include="UserCabinet.ui" />
     <QtUic Include="WarningMessage.ui" />
   </ItemGroup>
@@ -134,7 +134,7 @@
     <ClInclude Include="Enums.hpp" />
     <ClInclude Include="Functions.hpp" />
     <ClInclude Include="Libraries.hpp" />
-    <QtMoc Include="ModifyRecord.hpp" />
+    <QtMoc Include="ShowRecord.hpp" />
     <QtMoc Include="Record.hpp" />
     <QtMoc Include="UserCabinet.hpp" />
     <QtMoc Include="RegisterUser.hpp" />

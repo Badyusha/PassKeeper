@@ -35,7 +35,7 @@
 #include "ui_RegisterUser.h"
 #include "ui_UserCabinet.h"
 #include "ui_Record.h"
-#include "ui_ModifyRecord.h"
+#include "ui_ShowRecord.h"
 
 // enums
 #include "Enums.hpp"

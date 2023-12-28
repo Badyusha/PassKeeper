@@ -155,7 +155,8 @@ void UserCabinet::on_actionCreate_new_triggered() {
 	record->show();
 }
 
-void UserCabinet::on_actionModify_triggered() {
-	ModifyRecord* modify = new ModifyRecord(this->id);
-	modify->show();
+void UserCabinet::on_actionShow_all_triggered() {
+	this->hide();
+	ShowRecord* record = new ShowRecord();
+	record->show();
 }
